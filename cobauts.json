@@ -4,17 +4,17 @@
 	},
 	"inbounds": [{
 		"type": "vmess",
-		"tag": "vmess-ws-in",
+		"tag": "SG2test",
 		"listen": "::",
-		"listen_port": 80,
+		"listen_port": 443,
 		"users": [{
-			"name": "bitcoinvps.cloud",
-			"uuid": "3c1890e2-c768-4247-8a3b-032f6ed13a64",
+			"name": "ava.game.naver.com.sg2.servercepat.net",
+			"uuid": "678e3fee-a8ec-4c0e-a850-18133bb82787",
 			"alterId": 0
 		}],
 		"transport": {
 			"type": "ws",
-			"path": "/stream",
+			"path": "/vmess",
 			"max_early_data": 0,
 			"early_data_header_name": "Sec-WebSocket-Protocol"
 		}
