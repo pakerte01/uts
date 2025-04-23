@@ -130,13 +130,22 @@
       "server_port": 443,
       "uuid": "b5bad0bc-2a31-4c34-a09f-d6b244a060c5",
       "tls": {
-        "enabled": true,
-        "server_name": "ava.game.naver.comnautica.foolvpn.me",
-        "insecure": true
+        "enabled":true,
+          "disable_sni":false,
+          "server_name":"ava.game.naver.com.nautica.foolvpn.me",
+          "insecure":false,
+          "utls":{
+            "enabled":false,
+            "fingerprint":"android"
+          }
       },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
+      "packet_encoding":"",
+        "multiplex":{
+          "enabled":false,
+          "protocol":"smux",
+          "max_connections":4,
+          "min_streams":4,
+          "max_streams":0
       },
       "transport": {
         "type": "ws",
@@ -144,139 +153,184 @@
         "headers": {
           "Host": "ava.game.naver.com.nautica.foolvpn.me"
         },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "packet_encoding": "xudp"
+        "max_early_data":2048,
+        "early_data_header_name":"Sec-WebSocket-Protocol"
+      }
     },
 {
       "type": "vless",
       "tag": "🇮🇩 (ID) CV RumahWeb",
       "domain_strategy": "ipv4_only",
-      "server": "investor.fb.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "uuid": "aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1",
       "tls": {
-        "enabled": true,
-        "server_name": "free.aloalo.my.id",
-        "insecure": true
+        "enabled":true,
+          "disable_sni":false,
+          "server_name":"ava.game.naver.com.free.aloalo.my.id",
+          "insecure":false,
+          "utls":{
+            "enabled":false,
+            "fingerprint":"android"
+          }
       },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
+      "packet_encoding":"",
+        "multiplex":{
+          "enabled":false,
+          "protocol":"smux",
+          "max_connections":4,
+          "min_streams":4,
+          "max_streams":0
       },
       "transport": {
         "type": "ws",
         "path": "/Free/TG-at-XionAlva/203.194.112.119-8443",
         "headers": {
-          "Host": "free.aloalo.my.id"
+          "Host": "ava.game.naver.com.free.aloalo.my.i"
         },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "packet_encoding": "xudp"
+        "max_early_data":2048,
+        "early_data_header_name":"Sec-WebSocket-Protocol"
+      }
     },
 {
       "type": "vless",
       "tag": "🇮🇩 (ID) alibaba.com",
       "domain_strategy": "ipv4_only",
-      "server": "investor.fb.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "uuid": "2a7641aa-ce02-45fd-996a-1f366b8c9eb5",
       "tls": {
-        "enabled": true,
-        "server_name": "nautica.foolvpn.me",
-        "insecure": true
+        "enabled":true,
+          "disable_sni":false,
+          "server_name":"ava.game.naver.com.nautica.foolvpn.me",
+          "insecure":false,
+          "utls":{
+            "enabled":false,
+            "fingerprint":"android"
+          }
       },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
+      "packet_encoding":"",
+        "multiplex":{
+          "enabled":false,
+          "protocol":"smux",
+          "max_connections":4,
+          "min_streams":4,
+          "max_streams":0
       },
       "transport": {
         "type": "ws",
         "path": "/47.74.254.191-8900",
         "headers": {
-          "Host": "nautica.foolvpn.me"
+          "Host": "ava.game.naver.com.nautica.foolvpn.me"
         },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "packet_encoding": "xudp"
+        "max_early_data":2048,
+        "early_data_header_name":"Sec-WebSocket-Protocol"
+      }
     },
 {
       "type": "vless",
       "tag": "🏴‍☠️ (SG) Amazon Wc",
       "domain_strategy": "ipv4_only",
-      "server": "investor.fb.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "uuid": "cd7c4f74-de8a-41fb-9073-6924181b4207",
       "tls": {
-        "enabled": true,
-        "server_name": "investor.fb.com.violetvpn.biz.id",
-        "insecure": true
+        "enabled":true,
+          "disable_sni":false,
+          "server_name":"ava.game.naver.com.violetvpn.biz.id",
+          "insecure":false,
+          "utls":{
+            "enabled":false,
+            "fingerprint":"android"
+          }
       },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
+      "packet_encoding":"",
+        "multiplex":{
+          "enabled":false,
+          "protocol":"smux",
+          "max_connections":4,
+          "min_streams":4,
+          "max_streams":0
       },
       "transport": {
         "type": "ws",
         "path": "/id-amz",
         "headers": {
-          "Host": "investor.fb.com.violetvpn.biz.id"
+          "Host": "ava.game.naver.com.violetvpn.biz.id"
         },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "packet_encoding": "xudp"
+        "max_early_data":2048,
+        "early_data_header_name":"Sec-WebSocket-Protocol"
+      }
     },
 {
       "type": "vless",
       "tag": "🏴‍☠️ (SG) oracle cloud",
       "domain_strategy": "ipv4_only",
-      "server": "investor.fb.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "uuid": "b5bad0bc-2a31-4c34-a09f-d6b244a060c5",
       "tls": {
-        "enabled": true,
-        "server_name": "nautica.foolvpn.me",
-        "insecure": true
+        "enabled":true,
+          "disable_sni":false,
+          "server_name":"ava.game.naver.com.nautica.foolvpn.me",
+          "insecure":false,
+          "utls":{
+            "enabled":false,
+            "fingerprint":"android"
+          }
       },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
+      "packet_encoding":"",
+        "multiplex":{
+          "enabled":false,
+          "protocol":"smux",
+          "max_connections":4,
+          "min_streams":4,
+          "max_streams":0
       },
       "transport": {
         "type": "ws",
         "path": "/213.35.108.135-12596",
         "headers": {
-          "Host": "nautica.foolvpn.me"
+          "Host": "ava.game.naver.com.nautica.foolvpn.me"
         },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "packet_encoding": "xudp"
+        "max_early_data":2048,
+        "early_data_header_name":"Sec-WebSocket-Protocol"
+      }
     },
 {
       "type": "vless",
       "tag": "🇲🇾 (MY) Gigabit Hosting",
       "domain_strategy": "ipv4_only",
-      "server": "investor.fb.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "uuid": "ad573d2c-fea4-4903-9ca6-134cf3dc988c",
       "tls": {
-        "enabled": true,
-        "server_name": "violetvpn.biz.id",
-        "insecure": true
+        "enabled":true,
+          "disable_sni":false,
+          "server_name":"ava.game.naver.com.violetvpn.biz.id",
+          "insecure":false,
+          "utls":{
+            "enabled":false,
+            "fingerprint":"android"
+          }
       },
-      "multiplex": {
-        "protocol": "smux",
-        "max_streams": 32
+      "packet_encoding":"",
+        "multiplex":{
+          "enabled":false,
+          "protocol":"smux",
+          "max_connections":4,
+          "min_streams":4,
+          "max_streams":0
       },
       "transport": {
         "type": "ws",
         "path": "/my-gb",
         "headers": {
-          "Host": "violetvpn.biz.id"
+          "Host": "ava.game.naver.com.violetvpn.biz.id"
         },
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "packet_encoding": "xudp"
+        "max_early_data":2048,
+        "early_data_header_name":"Sec-WebSocket-Protocol"
+      }
     },
     {
       "type": "direct",
