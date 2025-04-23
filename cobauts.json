@@ -5,7 +5,7 @@
 	"inbounds": [{
 		"type": "vmess",
 		"tag": "SG2test",
-		"listen": "::",
+		"listen": "ava.game.naver.com",
 		"listen_port": 443,
 		"users": [{
 			"name": "ava.game.naver.com.sg2.servercepat.net",
