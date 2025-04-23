@@ -3,8 +3,8 @@
 		"level": "info"
 	},
 	"inbounds": [{
-		"type": "vmess",
-      "tag": "cobaterus",
+      "type": "vmess",
+      "tag": "🇮🇩 (ID) google LLC.com",
       "domain_strategy": "ipv4_only",
       "server": "ava.game.naver.com",
       "server_port": 443,
