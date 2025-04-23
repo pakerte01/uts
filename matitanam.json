@@ -1,0 +1,345 @@
+{
+  "log": {
+    "level": "info"
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "remote-dns",
+        "address": "https://family.cloudflare-dns.com/dns-query",
+        "address_resolver": "direct-dns",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "direct-dns",
+        "address": "local",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns-final",
+        "address": "local",
+        "address_resolver": "dns-local",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "family.cloudflare-dns.com",
+          "bug.mu"
+        ],
+        "server": "direct-dns"
+      }
+    ],
+    "final": "dns-final",
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "mtu": 1400,
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "Internet",
+      "type": "selector",
+      "outbounds": [
+        "Best Latency",
+        "MATITANAM",
+        "🇮🇩 (ID) CV RumahWeb",
+        "🏴‍☠️ (SG) Amazon.com",
+        "🇮🇩 (ID) alibaba.com",
+        "🏴‍☠️ (SG) Amazon Wc",
+        "🏴‍☠️ (SG) oracle cloud",
+        "🇲🇾 (MY) Gigabit Hosting",
+        "direct"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "Best Latency",
+      "outbounds": [
+        "MATITANAM",
+        "🇮🇩 (ID) CV RumahWeb",
+        "🏴‍☠️ (SG) Amazon.com",
+        "🇮🇩 (ID) alibaba.com",
+        "🏴‍☠️ (SG) Amazon Wc",
+        "🏴‍☠️ (SG) oracle cloud",
+        "🇲🇾 (MY) Gigabit Hosting",
+        "direct"
+      ],
+      "url": "https://ping.bexnxx.us.kg",
+      "interval": "30s"
+    },
+{
+      "type":"vmess",
+        "tag":"MATITANAM",
+        "server":"ava.game.naver.com",
+        "server_port":443,
+        "uuid":"0000000000",
+        "security":"auto",
+        "alter_id":0,
+        "global_padding":false,
+        "authenticated_length":true,
+        "tcp_fast_open":false,
+        "domain_strategy":"ipv4_only",
+        "tls":{
+          "enabled":true,
+          "disable_sni":false,
+          "server_name":"ava.game.naver.com.server.net",
+          "insecure":false,
+          "utls":{
+            "enabled":false,
+            "fingerprint":"android"
+          }
+        },
+        "packet_encoding":"",
+        "multiplex":{
+          "enabled":false,
+          "protocol":"smux",
+          "max_connections":4,
+          "min_streams":4,
+          "max_streams":0
+        },
+        "transport":{
+          "type":"ws",
+          "path":"/vmess",
+          "headers":{
+            "Host":"ava.game.naver.com.server.net"
+          },
+          "max_early_data":2048,
+          "early_data_header_name":"Sec-WebSocket-Protocol"
+        }
+    },
+{
+      "type": "vless",
+      "tag": "🏴‍☠️ (SG) Amazon.com",
+      "domain_strategy": "ipv4_only",
+      "server": "ava.game.naver.com",
+      "server_port": 443,
+      "uuid": "b5bad0bc-2a31-4c34-a09f-d6b244a060c5",
+      "tls": {
+        "enabled": true,
+        "server_name": "ava.game.naver.comnautica.foolvpn.me",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/54.169.229.188-443",
+        "headers": {
+          "Host": "ava.game.naver.com.nautica.foolvpn.me"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+{
+      "type": "vless",
+      "tag": "🇮🇩 (ID) CV RumahWeb",
+      "domain_strategy": "ipv4_only",
+      "server": "investor.fb.com",
+      "server_port": 443,
+      "uuid": "aaaaaaa1-bbbb-4ccc-accc-eeeeeeeeeee1",
+      "tls": {
+        "enabled": true,
+        "server_name": "free.aloalo.my.id",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/Free/TG-at-XionAlva/203.194.112.119-8443",
+        "headers": {
+          "Host": "free.aloalo.my.id"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+{
+      "type": "vless",
+      "tag": "🇮🇩 (ID) alibaba.com",
+      "domain_strategy": "ipv4_only",
+      "server": "investor.fb.com",
+      "server_port": 443,
+      "uuid": "2a7641aa-ce02-45fd-996a-1f366b8c9eb5",
+      "tls": {
+        "enabled": true,
+        "server_name": "nautica.foolvpn.me",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/47.74.254.191-8900",
+        "headers": {
+          "Host": "nautica.foolvpn.me"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+{
+      "type": "vless",
+      "tag": "🏴‍☠️ (SG) Amazon Wc",
+      "domain_strategy": "ipv4_only",
+      "server": "investor.fb.com",
+      "server_port": 443,
+      "uuid": "cd7c4f74-de8a-41fb-9073-6924181b4207",
+      "tls": {
+        "enabled": true,
+        "server_name": "investor.fb.com.violetvpn.biz.id",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/id-amz",
+        "headers": {
+          "Host": "investor.fb.com.violetvpn.biz.id"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+{
+      "type": "vless",
+      "tag": "🏴‍☠️ (SG) oracle cloud",
+      "domain_strategy": "ipv4_only",
+      "server": "investor.fb.com",
+      "server_port": 443,
+      "uuid": "b5bad0bc-2a31-4c34-a09f-d6b244a060c5",
+      "tls": {
+        "enabled": true,
+        "server_name": "nautica.foolvpn.me",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/213.35.108.135-12596",
+        "headers": {
+          "Host": "nautica.foolvpn.me"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+{
+      "type": "vless",
+      "tag": "🇲🇾 (MY) Gigabit Hosting",
+      "domain_strategy": "ipv4_only",
+      "server": "investor.fb.com",
+      "server_port": 443,
+      "uuid": "ad573d2c-fea4-4903-9ca6-134cf3dc988c",
+      "tls": {
+        "enabled": true,
+        "server_name": "violetvpn.biz.id",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/my-gb",
+        "headers": {
+          "Host": "violetvpn.biz.id"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
+      },
+      {
+        "source_ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "ip_cidr": [
+          "224.0.0.0/3",
+          "ff00::/8"
+        ],
+        "outbound": "block"
+      }
+    ],
+    "auto_detect_interface": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": false
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
+      "external_ui_download_url": "https://github.com/MetaCubeX/metacubexd/archive/gh-pages.zip",
+      "external_ui_download_detour": "Internet",
+      "secret": "aaaa al",
+      "default_mode": "rule"
+    }
+  }
+}
