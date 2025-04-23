@@ -1,23 +1,32 @@
 {
 	"log": {
-		"level": "trace"
+		"level": "info"
 	},
 	"inbounds": [{
 		"type": "vmess",
-		"tag": "SG2test",
-		"listen": "ava.game.naver.com",
-		"listen_port": 443,
-		"users": [{
-			"name": "ava.game.naver.com.sg2.servercepat.net",
-			"uuid": "678e3fee-a8ec-4c0e-a850-18133bb82787",
-			"alterId": 0
-		}],
-		"transport": {
-			"type": "ws",
-			"path": "/vmess",
-			"max_early_data": 0,
-			"early_data_header_name": "Sec-WebSocket-Protocol"
-		}
+      "tag": "cobaterus",
+      "domain_strategy": "ipv4_only",
+      "server": "ava.game.naver.com",
+      "server_port": 443,
+      "uuid": "678e3fee-a8ec-4c0e-a850-18133bb82787",
+      "tls": {
+        "enabled": true,
+        "server_name": "ava.game.naver.com.sg2.servercepat.net",
+        "insecure": true
+      },
+      "multiplex": {
+        "protocol": "smux",
+        "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vmess",
+        "headers": {
+          "Host": "ava.game.naver.com.sg2.servercepat.net"
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": "xudp"
 	}],
 	"outbounds": [{
 		"type": "direct",
