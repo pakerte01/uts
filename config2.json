@@ -1,0 +1,32 @@
+    {
+      "type": "vmess",
+      "tag": "sg1coba",
+    
+      "server": "ava.game.naver.com",
+      "server_port": 443,
+      "uuid": "d593ed09-473c-44d3-b438-4c2bd059a70a",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
+      "network": "tcp",
+      "tls": {
+            "enabled": true,
+            "server_name": "ava.game.naver.com.sg1.servercepat.net",
+            "insecure": true
+          },
+      "packet_encoding": "xudp",
+      "transport": {
+            "type": "ws",
+            "path": "/vmess",
+            "headers": {
+              "Host": "ava.game.naver.com.sg1.servercepat.net"
+            },
+          },
+      "multiplex": {
+            "protocol": "smux",
+            "max_streams": 32
+          },
+    
+      ... // Dial Fields
+    }
