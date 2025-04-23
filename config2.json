@@ -27,6 +27,5 @@
             "protocol": "smux",
             "max_streams": 32
           },
-    
-      ... // Dial Fields
+
     }
